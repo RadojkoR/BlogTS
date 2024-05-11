@@ -1,17 +1,25 @@
-import { Nav, Header, Footer } from '../Components/Layout';
+import { Route, Routes } from 'react-router-dom';
+import { Nav, Footer } from '../Components/Layout';
 import '../Styles/App.scss';
+import { About, Blog, Destinations, Home, LogIn, TravelTips } from '../Pages/indexPages';
 
 function App() {
 
   return (
-    <>
+    <div className="relative">
       <Nav />
-      <Header />
-      <h1 className="text-3xl font-bold underline">
-        Travels with Drea App.tsx
-      </h1>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/destinations" element={<Destinations />}></Route>
+          <Route path="/blog" element={<Blog />}></Route>
+          <Route path="/traveltips" element={<TravelTips />}></Route>
+          <Route path="/login" element={<LogIn />}></Route>
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

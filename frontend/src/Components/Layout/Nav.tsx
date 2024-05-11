@@ -1,27 +1,34 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../Assets/logo.png"
 
 
 function Nav() {
   const menuItems: string[] = [
-    "Home",
     "About",
     "Destinations",
     "Blog",
     "Travel Tips",
   ];
   return (
-    <nav className="bg-black">
-      <div className="mx-auto px-2 sm:px-6 lg:px-8">
+    <nav className="bg-black fixed w-full top-0 left-0">
+      <div className="mx-auto px-2 py-4">
         <div className="relative flex h-16 items-center justify-between">
           {/* LOGO */}
           <div className="p-5 logoContainer">
-            <img src={logo} alt="Travels with Drea Logo" />
+            <NavLink to="/">
+              <img src={logo} alt="Travels with Drea Logo" />
+            </NavLink>
           </div>
           {/* MENU */}
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 me-16">
+            <li className="text-gray-300 text-xl font-semibold">
+              <NavLink to={"/"}>HOME</NavLink>
+            </li>
             {menuItems.map((item, index) => (
               <li className="text-gray-300 text-xl font-semibold" key={index}>
-                {item.toUpperCase()}
+                <NavLink to={`/${item.replace(/\s+/g, "").toLowerCase()}`}>
+                  {item.toUpperCase()}
+                </NavLink>
               </li>
             ))}
           </ul>
