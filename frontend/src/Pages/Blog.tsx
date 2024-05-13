@@ -1,9 +1,13 @@
+import { Header } from "../Components/Layout";
 
 
 function Blog() {
   return (
-    <h1 className="mt-48 text-center text-5xl">Blog</h1>
-  )
+    <>
+      <Header className="bg-bgHeaderBlog bg-contain bg-center" title="Blog" />
+      <h1 className="my-20 text-center text-5xl">Blog</h1>
+    </>
+  );
 }
 
 export default Blog

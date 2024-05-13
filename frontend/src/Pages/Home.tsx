@@ -4,8 +4,8 @@ import { Header } from "../Components/Layout";
 function Home() {
   return (
     <>
-      <Header />
-      <h1 className="mt-48 text-center text-5xl">Home</h1>
+      <Header className="bg-bgHeaderHome" title="Travels With Drea" />
+      <h1 className="my-20 text-center text-5xl font-bold">Latest from the Blog</h1>
     </>
   );
 }

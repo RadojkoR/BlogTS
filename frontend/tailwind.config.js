@@ -6,12 +6,22 @@ export default {
   ],
   theme: {
     extend: {
-       backgroundImage: {
-        'hero-pattern': "url('./src/Assets/homeHeader.jpg')",
+      backgroundImage: {
+        'bgHeaderHome': "url(./src/Assets/homeHeader.jpg)",
+        'bgHeaderAbout': "url(./src/Assets/About-Header.webp)",
+        'bgHeaderDestination': "url(./src/Assets/herceg_novi-destinationHeader.webp)",
+        'bgHeaderBlog': "url(./src/Assets/HeaderBlog.webp)",
       },
-      height: {
-        '70vh': '70vh'
+      backgroundColor: {
+        'nav': '#1d2228'
+      },
+      colors: {
+        orange: '#fb8122'
+      },
+      fontFamily:{
+        'caveat': '"Caveat", cursive'
       }
+
     },
   },
   plugins: [],
